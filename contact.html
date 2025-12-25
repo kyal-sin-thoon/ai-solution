@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/styles/common.css">
+  <link rel="stylesheet" href="assets/styles/contact.css">
+
+  <title>Contact us | AI Solution</title>
+  <link rel="icon" href="img/logo_w_bg.png">
+</head>
+
+<body>
+  
+   <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+          <img src="img/logo.jpg" width="45" height="45" class="mx-3"/>
+        AI Solution
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">Our History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+
+        <a class="admin-link" href="admin.html" aria-label="Admin Dashboard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="hero-content text-center">
+        <h1 class="hero-title">Get in Touch with AI Solution</h1>
+        <p class="hero-subtitle">Ready to transform your business with cutting-edge AI solutions? Let's start the
+          conversation about your digital transformation journey.</p>
+        <div class="hero-divider"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Cards -->
+  <section class="contact-cards-section py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <!-- Phone Card -->
+        <div class="col-md-4">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
+            </div>
+            <h4>Phone Support</h4>
+            <p class="contact-info">+9691 2560 0020</p>
+            <p class="contact-hours">Mon-Fri, 9:00 AM - 6:00 PM GMT</p>
+            <a href="tel:+969125600020" class="contact-action">
+              Call Now
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Email Card -->
+        <div class="col-md-4">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+            </div>
+            <h4>Email Us</h4>
+            <p class="contact-info">aisolution@gmail.com</p>
+            <p class="contact-hours">Typically respond within 2 hours</p>
+            <a href="mailto:aisolution@gmail.com" class="contact-action">
+              Send Email
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Location Card -->
+        <div class="col-md-4">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
+              </svg>
+            </div>
+            <h4>Visit Us</h4>
+            <p class="contact-info">Sunderland, United Kingdom</p>
+            <p class="contact-hours">Open Mon–Fri, 9:00–17:00</p>
+            <a href="#location-map" class="contact-action">
+              View Location
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-form-section py-5" id="contact-form">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+          <div class="contact-info-sidebar">
+            <h2 class="section-title">Let's Start Your AI Journey</h2>
+            <p class="section-subtitle">Fill out the form and our AI experts will get back to you within 24 hours.</p>
+
+            <div class="contact-details mt-5">
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h5>Email</h5>
+                  <p>aisolution@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h5>Phone</h5>
+                  <p>+9691 2560 0020</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 a2.5 2.5 0 010 5z" />
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h5>Head Office</h5>
+                  <p>Sunderland, United Kingdom</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="privacy-note mt-5">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+                </svg>
+              </div>
+              <div class="detail-content">
+                <h5>Data Privacy</h5>
+                <p>We respect your privacy. Your information is secure and will never be shared with third parties.</p>
+              </div>
+            </div>
+
+            <div class="social-connect mt-5">
+              <h5>Connect With Us</h5>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enhanced Contact Form -->
+        <div class="col-lg-7">
+          <div class="contact-form-card">
+            <h3 class="form-title">Send us a message</h3>
+            <p class="form-subtitle">Tell us about your project and we'll connect you with the right AI specialist.</p>
+
+            <form class="needs-validation" novalidate id="contactForm">
+              <div class="row g-3">
+                <!-- Row 1 - Name & Company Name -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+                    <label for="fullName">Full Name *</label>
+                    <div class="invalid-feedback">Please enter your full name</div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="company" placeholder="Company Name">
+                    <label for="company">Company</label>
+                  </div>
+                </div>
+
+                <!-- Row 2 - Phone & Email-->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                    <label for="phone">Phone Number *</label>
+                    <div class="invalid-feedback">Please enter your phone number</div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                    <label for="email">Email Address *</label>
+                    <div class="invalid-feedback">Please enter a valid email address</div>
+                  </div>
+                </div>
+
+                <!-- Row 3 - Feedback - Additional Feedback -->
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="additionalFeedback" placeholder="Additional Feedback"
+                      style="height: 100px"></textarea>
+                    <label for="additionalFeedback">Additional Feedback / Comments</label>
+                    <div class="form-text">Any other information you'd like to share with us</div>
+                  </div>
+                </div>
+
+                <!-- Row 4 - Job title-->
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="jobTitle" placeholder="Job Title">
+                    <label for="jobTitle">Job Title</label>
+                  </div>
+                </div>
+
+                <!-- Row 5 - Job details-->
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="jobDetails" placeholder="Job Details"
+                      style="height: 100px"></textarea>
+                    <label for="jobDetails">Job details</label>
+                    <div class="form-text">Describe your current role and responsibilities</div>
+                  </div>
+                </div>
+
+                <!-- Row 6 - Country & Service information-->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select" id="country" required>
+                      <option value="" selected disabled>Select your country</option>
+                      <option value="UK">United Kingdom</option>
+                      <option value="US">United States</option>
+                      <option value="CA">Canada</option>
+                      <option value="AU">Australia</option>
+                      <option value="DE">Germany</option>
+                      <option value="FR">France</option>
+                      <option value="JP">Japan</option>
+                      <option value="CN">China</option>
+                      <option value="IN">India</option>
+                      <option value="SG">Singapore</option>
+                      <option value="AE">United Arab Emirates</option>
+                      <option value="SA">Saudi Arabia</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <label for="country">Country *</label>
+                    <div class="invalid-feedback">Please select your country</div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select" id="service" required>
+                      <option value="" selected disabled>Select a service</option>
+                      <option value="machine-learning">Machine Learning</option>
+                      <option value="nlp">Natural Language Processing</option>
+                      <option value="computer-vision">Computer Vision</option>
+                      <option value="predictive-analytics">Predictive Analytics</option>
+                      <option value="ai-automation">AI Automation</option>
+                      <option value="ai-consulting">AI Strategy Consulting</option>
+                      <option value="custom-development">Custom AI Development</option>
+                      <option value="multiple">Multiple Services</option>
+                      <option value="not-sure">Not Sure - Need Consultation</option>
+                    </select>
+                    <label for="service">Service Interest *</label>
+                    <div class="invalid-feedback">Please select a service</div>
+                  </div>
+                </div>
+
+                <!-- Row 7 - Project Details -->
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="projectDetails" placeholder="Project Details"
+                      style="height: 120px" required></textarea>
+                    <label for="projectDetails">Project Details / Requirements *</label>
+                    <div class="form-text">Tell us about your project goals, challenges, and timeline</div>
+                    <div class="invalid-feedback">Please describe your project</div>
+                  </div>
+                </div>
+
+                <!-- Budget & Timeline -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select" id="budget">
+                      <option value="" selected>Project Budget Range</option>
+                      <option value="under-10k">Under $10,000</option>
+                      <option value="10k-50k">$10,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - $100,000</option>
+                      <option value="100k-250k">$100,000 - $250,000</option>
+                      <option value="250k-plus">$250,000+</option>
+                      <option value="not-sure">Not Sure / Need Quote</option>
+                    </select>
+                    <label for="budget">Project Budget</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select" id="timeline">
+                      <option value="" selected>Project Timeline</option>
+                      <option value="immediate">Immediately (1-4 weeks)</option>
+                      <option value="short-term">Short-term (1-3 months)</option>
+                      <option value="medium-term">Medium-term (3-6 months)</option>
+                      <option value="long-term">Long-term (6+ months)</option>
+                      <option value="not-sure">Not Sure / Flexible</option>
+                    </select>
+                    <label for="timeline">Project Timeline</label>
+                  </div>
+                </div>
+
+                <!-- How did you hear about us -->
+                <div class="col-12">
+                  <div class="form-floating">
+                    <select class="form-select" id="hearAbout">
+                      <option value="" selected>How did you hear about us?</option>
+                      <option value="search">Search Engine (Google, Bing, etc.)</option>
+                      <option value="social">Social Media</option>
+                      <option value="referral">Referral / Recommendation</option>
+                      <option value="event">Industry Event / Conference</option>
+                      <option value="article">Article / Blog Post</option>
+                      <option value="ad">Online Advertisement</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <label for="hearAbout">How did you hear about us?</label>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg w-100" id="submitBtn">
+                    Submit Message
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="ms-2">
+                      <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                    </svg>
+                  </button>
+                  <p class="text-muted small mt-2">* Required fields. We'll respond within 24 hours.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Map Section -->
+  <section class="location-section py-5" id="location-map">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Our Global Headquarters</h2>
+        <p class="section-subtitle">Visit us or connect with our international offices</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="map-container">
+            <div class="map-placeholder">
+              <div class="map-overlay">
+                <div class="map-marker">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="#0B3881">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 a2.5 2.5 0 010 5z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="map-info">
+                <h4>AI Solution Headquarters</h4>
+                <p>123 Innovation Drive, Sunderland SR1 1AA, United Kingdom</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="office-info-card">
+            <h4>Visit Our Office</h4>
+            <div class="office-details">
+              <div class="office-detail">
+                <div class="detail-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 a2.5 2.5 0 010 5z" />
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h5>Address</h5>
+                  <p>123 Innovation Drive<br>Sunderland SR1 1AA<br>United Kingdom</p>
+                </div>
+              </div>
+
+              <div class="office-detail">
+                <div class="detail-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h5>Business Hours</h5>
+                  <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                </div>
+              </div>
+
+              <div class="office-detail">
+                <div class="detail-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h5>Contact</h5>
+                  <p>+9691 2560 0020<br>aisolution@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-cta mt-4">
+              <h5>Schedule a Meeting</h5>
+              <p>Book a consultation with our AI experts</p>
+              <a href="#contact-form" class="btn btn-outline-primary">
+                Book Appointment
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="ms-2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Get quick answers to common questions</p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              How quickly will I receive a response to my inquiry?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We typically respond to all inquiries within 2 business hours during working days. For urgent matters,
+              please call our support line directly.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Do you offer free AI consultations?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, we offer a free 30-minute consultation to understand your business needs and provide initial
+              recommendations for AI implementation.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              What industries do you specialize in?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We work across multiple industries including healthcare, finance, manufacturing, retail, and education.
+              Our AI solutions are customizable to any industry's specific needs.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              How do you ensure data privacy and security?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We follow industry-best security practices including end-to-end encryption, GDPR compliance, and regular
+              security audits. Your data privacy is our top priority.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer CTA -->
+        <div class="footer-cta text-center">
+          <h4>Ready to Transform Your Business with AI?</h4>
+          <p>Join hundreds of satisfied clients who have revolutionized their operations with our AI solutions.</p>
+          <a href="contact.html" class="btn">
+            Get Started Today
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              class="ms-2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-content">
+          <div class="row g-4">
+            <!-- Brand Column -->
+            <div class="col-lg-4">
+              <div class="footer-brand">
+                <div class="footer-brand-text">
+                  <h4>AI Solution</h4>
+                  <p>Cutting-edge AI solutions that transform businesses and drive innovation across industries.</p>
+                </div>
+              </div>
+
+              <div class="contact-info mt-4">
+                <p>
+                  aisolution@gmail.com
+                </p>
+                <p>
+                  +9691 2690 0020
+                </p>
+              </div>
+
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-links">
+                <h5>Quick Links</h5>
+                <ul>
+                  <li><a href="#">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                      Home
+                    </a></li>
+                  <li><a href="about.html">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                      About Us
+                    </a></li>
+                  <li><a href="services.html">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                      Services
+                    </a></li>
+                  <li><a href="history.html">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                      Our History
+                    </a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-links">
+                <h5>Services</h5>
+                <ul>
+                  <li><a href="#">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                      </svg>
+                      Machine Learning
+                    </a></li>
+                  <li><a href="#">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                      </svg>
+                      Natural Language Processing
+                    </a></li>
+                  <li><a href="#">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path
+                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                      Computer Vision
+                    </a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Location Map -->
+            <div class="col-lg-4 col-md-12">
+              <div class="footer-map">
+                <div class="map-placeholder"
+                  style="width: 100%; height: 200px; background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);">
+                  <div class="text-center">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.3)">
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
+                    </svg>
+                    <p class="mt-2">Global Headquarters</p>
+                    <small>Multiple locations worldwide</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>AI Solution &copy; 2025. All rights reserved. | <a href="#" class="text-white-50">Privacy Policy</a> | <a
+              href="#" class="text-white-50">Terms of Service</a></p>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="footer-background">
+          <div class="footer-bg-element"></div>
+          <div class="footer-bg-element"></div>
+          <div class="footer-bg-element"></div>
+        </div>
+    </footer>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Header scroll effect
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Form validation and submission
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        if (!this.checkValidity()) {
+          e.stopPropagation();
+          this.classList.add('was-validated');
+          return;
+        }
+        
+        // Collect form data
+        const formData = {
+          fullName: document.getElementById('fullName').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          company: document.getElementById('company').value || '',
+          jobTitle: document.getElementById('jobTitle').value || '',
+          country: document.getElementById('country').value,
+          service: document.getElementById('service').value,
+          projectDetails: document.getElementById('projectDetails').value,
+          jobDetails: document.getElementById('jobDetails').value || '',
+          additionalFeedback: document.getElementById('additionalFeedback').value || '',
+          budget: document.getElementById('budget').value || '',
+          timeline: document.getElementById('timeline').value || '',
+          hearAbout: document.getElementById('hearAbout').value || ''
+        };
+        
+        // Show loading
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = `
+          <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+          Sending...
+        `;
+        submitBtn.disabled = true;
+        
+        try {
+          // Send to backend API
+          const response = await fetch('http://localhost:3000/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Success message with better styling
+            const successAlert = document.createElement('div');
+            successAlert.className = 'alert alert-success alert-dismissible fade show mt-3';
+            successAlert.innerHTML = `
+              <div class="d-flex align-items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-success me-2">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <div>
+                  <h5 class="alert-heading mb-1">Message Sent Successfully!</h5>
+                  <p class="mb-0">Thank you for contacting AI Solution. Our experts will get back to you within 24 hours.</p>
+                </div>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            
+            // Insert after form
+            form.parentNode.insertBefore(successAlert, form.nextSibling);
+            
+            // Reset form
+            form.reset();
+            form.classList.remove('was-validated');
+            
+            // Auto-hide alert after 10 seconds
+            setTimeout(() => {
+              const bsAlert = new bootstrap.Alert(successAlert);
+              bsAlert.close();
+            }, 10000);
+          } else {
+            // Error message
+            const errorAlert = document.createElement('div');
+            errorAlert.className = 'alert alert-danger alert-dismissible fade show mt-3';
+            errorAlert.innerHTML = `
+              <div class="d-flex align-items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-danger me-2">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+                <div>
+                  <h5 class="alert-heading mb-1">Submission Failed</h5>
+                  <p class="mb-0">${result.error || 'Failed to send message. Please try again.'}</p>
+                </div>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            
+            form.parentNode.insertBefore(errorAlert, form.nextSibling);
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          
+          // Network error
+          const networkAlert = document.createElement('div');
+          networkAlert.className = 'alert alert-warning alert-dismissible fade show mt-3';
+          networkAlert.innerHTML = `
+            <div class="d-flex align-items-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-warning me-2">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+              </svg>
+              <div>
+                <h5 class="alert-heading mb-1">Network Error</h5>
+                <p class="mb-0">Cannot connect to server. Please check your connection and try again.</p>
+                <p class="mb-0 small">Make sure backend server is running: <code>node server.js</code></p>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          `;
+          
+          form.parentNode.insertBefore(networkAlert, form.nextSibling);
+        } finally {
+          // Reset button
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    });
+
+    // Test backend connection on page load
+    window.addEventListener('load', function() {
+      fetch('http://localhost:3000/api/test')
+        .then(response => {
+          if (!response.ok) {
+            console.warn('Backend server not responding. Form submissions will fail.');
+          }
+        })
+        .catch(() => {
+          console.warn('Cannot connect to backend server. Make sure to run: node server.js');
+        });
+    });
+  </script>
+</body>
+</html>

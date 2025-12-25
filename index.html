@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/styles/common.css">
+  <link rel="stylesheet" href="assets/styles/index.css">
+
+  <title> Home | AI Solution</title>
+  <link rel="icon" href="img/logo_w_bg.png">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+          <img src="img/logo.jpg" width="45" height="45" class="mx-3"/>
+        AI Solution
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">Our History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+
+        <a class="admin-link" href="admin.html" aria-label="Admin Dashboard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-7 text-lg-start text-center">
+          <h1 class="fw-bold mb-3">Welcome to AI Solution</h1>
+          <h4 class="fw-semibold mb-2">Smarter Solutions. Better Experiences.</h4>
+          <p class="mb-4">
+            At AI Solution, we transform businesses through cutting-edge artificial intelligence technologies. 
+            From machine learning algorithms to natural language processing and computer vision, we provide 
+            end-to-end AI solutions that drive innovation, enhance efficiency, and deliver measurable results 
+            for organizations across industries.
+          </p>
+          <div class="d-flex gap-3 justify-content-lg-start justify-content-center">
+            <a class="btn btn-light btn-lg px-4 rounded-pill fw-semibold" href="#">
+              Get Started
+            </a>
+            <a class="btn btn-outline-light btn-lg px-4 rounded-pill" href="#">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="floating-image-container">
+            <div class="floating-image-wrapper">
+              <img class="floating-img" src="img/robot3.png" alt="AI Solutions Hero">
+              <div class="glow-effect"></div>
+              <div class="orbit-dots">
+                <div class="orbit-dot dot-1"></div>
+                <div class="orbit-dot dot-2"></div>
+                <div class="orbit-dot dot-3"></div>
+                <div class="orbit-dot dot-4"></div>
+              </div>
+              <div class="floating-shape shape-1"></div>
+              <div class="floating-shape shape-2"></div>
+              <div class="floating-shape shape-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background floating particles -->
+    <div class="background-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <!-- Happy Clients -->
+        <div class="col-6 col-md-3">
+          <div class="stat-card text-center p-4 rounded-4 shadow-sm border-0 bg-white">
+            <div class="stat-icon mb-3">
+              <svg class="icon-flat" viewBox="0 0 24 24">
+                <circle cx="8" cy="8" r="4" fill="#0E3A75"></circle>
+                <circle cx="16" cy="10" r="3" fill="#3B82F6"></circle>
+                <rect x="3" y="14" width="18" height="6" rx="3" fill="#10B981"></rect>
+              </svg>
+            </div>
+            <div class="stat-value display-6 fw-bold mb-2">100+</div>
+            <div class="text-muted fw-semibold">Happy Clients</div>
+          </div>
+        </div>
+
+        <!-- Projects Completed -->
+        <div class="col-6 col-md-3">
+          <div class="stat-card text-center p-4 rounded-4 shadow-sm border-0 bg-white">
+            <div class="stat-icon mb-3">
+              <svg class="icon-flat" viewBox="0 0 24 24">
+                <path d="M3 6h6l2 2h10v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="#0E3A75"></path>
+                <rect x="8" y="10" width="8" height="2" rx="1" fill="#3B82F6"></rect>
+                <rect x="8" y="14" width="5" height="2" rx="1" fill="#10B981"></rect>
+              </svg>
+            </div>
+            <div class="stat-value display-6 fw-bold mb-2">20+</div>
+            <div class="text-muted fw-semibold">Projects Completed</div>
+          </div>
+        </div>
+
+        <!-- Positive Reviews -->
+        <div class="col-6 col-md-3">
+          <div class="stat-card text-center p-4 rounded-4 shadow-sm border-0 bg-white">
+            <div class="stat-icon mb-3">
+              <svg class="icon-flat" viewBox="0 0 24 24">
+                <path d="M12 21c-5-3.5-8-6.5-8-10a5 5 0 0 1 5-5c2 0 3 1 3 2 0-1 1-2 3-2a5 5 0 0 1 5 5c0 3.5-3 6.5-8 10z"
+                  fill="#0E3A75"></path>
+                <path d="M8 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="#3B82F6"></path>
+                <path d="M16 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="#3B82F6"></path>
+                <path d="M12 15c-1.5 0-2.5-.5-3-1.5" stroke="#10B981" stroke-width="2" stroke-linecap="round"
+                  fill="none"></path>
+              </svg>
+            </div>
+            <div class="stat-value display-6 fw-bold mb-2">1.5k</div>
+            <div class="text-muted fw-semibold">Positive Reviews</div>
+          </div>
+        </div>
+
+        <!-- Rating Stars -->
+        <div class="col-6 col-md-3">
+          <div class="stat-card text-center p-4 rounded-4 shadow-sm border-0 bg-white">
+            <div class="stat-icon mb-3">
+              <svg class="icon-flat" viewBox="0 0 24 24">
+                <path d="M12 17.27L18 21l-2-6.5L22 10l-6.9-.6L12 3 8.9 9.4 2 10l6 4.5-2 6.5z" fill="#0E3A75"></path>
+                <path d="M12 17.27L14.5 19l-.8-2.6L16 14l-2.7-.2L12 11l-1.3 2.8L8 14l2.3 2.4L9.5 19z" fill="#3B82F6">
+                </path>
+                <circle cx="12" cy="10" r="1.5" fill="#10B981"></circle>
+              </svg>
+            </div>
+            <div class="stat-value display-6 fw-bold mb-2">4.5</div>
+            <div class="text-muted fw-semibold">Avg. Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Partners Section -->
+  <section class="partners-section py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h3 class="fw-bold mb-3">Trusted by Industry Leaders</h3>
+        <p class="text-muted mx-auto">We partner with top technology companies to deliver cutting-edge AI solutions</p>
+      </div>
+
+      <div class="partners-container">
+        <div class="partner-grid">
+          <!-- AWS -->
+          <div class="partner-card">
+            <div class="partner-logo-wrapper">
+              <div class="partner-logo-outer">
+                <div class="partner-logo-inner">
+                  <img
+                    src="https://images.seeklogo.com/logo-png/31/1/amazon-web-services-aws-logo-png_seeklogo-319188.png"
+                    alt="Amazon Web Services" class="partner-img">
+                </div>
+                <div class="partner-glow"></div>
+                <div class="partner-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="partner-info">
+                <h6 class="mb-0 fw-semibold">AWS</h6>
+                <small class="text-muted">Cloud Services</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hostinger -->
+          <div class="partner-card">
+            <div class="partner-logo-wrapper">
+              <div class="partner-logo-outer">
+                <div class="partner-logo-inner">
+                  <img src="https://images.seeklogo.com/logo-png/50/2/hostinger-logo-png_seeklogo-507103.png"
+                    alt="Hostinger" class="partner-img">
+                </div>
+                <div class="partner-glow"></div>
+                <div class="partner-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="partner-info">
+                <h6 class="mb-0 fw-semibold">Hostinger</h6>
+                <small class="text-muted">Web Hosting</small>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <!-- Google Cloud -->
+          <div class="partner-card">
+            <div class="partner-logo-wrapper">
+              <div class="partner-logo-outer">
+                <div class="partner-logo-inner">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqhA1gv1uj0tWN1kJubhhPruf29_rk7D6ig&s"
+                    alt="Google Cloud" class="partner-img">
+                </div>
+                <div class="partner-glow"></div>
+                <div class="partner-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="partner-info">
+                <h6 class="mb-0 fw-semibold">Google Cloud</h6>
+                <small class="text-muted">Cloud Services</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Microsoft Azure -->
+          <div class="partner-card">
+            <div class="partner-logo-wrapper">
+              <div class="partner-logo-outer">
+                <div class="partner-logo-inner">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/2048px-Microsoft_Azure.svg.png"
+                    alt="Microsoft Azure" class="partner-img">
+                </div>
+                <div class="partner-glow"></div>
+                <div class="partner-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="partner-info">
+                <h6 class="mb-0 fw-semibold">Azure</h6>
+                <small class="text-muted">Cloud Platform</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- IBM -->
+          <div class="partner-card">
+            <div class="partner-logo-wrapper">
+              <div class="partner-logo-outer">
+                <div class="partner-logo-inner">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOVjTWaheo4E99cgYZ6y14tpsgHlm0VN8Hw&s"
+                    alt="IBM" class="partner-img">
+                </div>
+                <div class="partner-glow"></div>
+                <div class="partner-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="partner-info">
+                <h6 class="mb-0 fw-semibold">IBM</h6>
+                <small class="text-muted">Enterprise Solutions</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated background elements -->
+        <div class="partners-background">
+          <div class="bg-element bg-element-1"></div>
+          <div class="bg-element bg-element-2"></div>
+          <div class="bg-element bg-element-3"></div>
+          <div class="bg-element bg-element-4"></div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 pt-3">
+        <a href="#" class="btn btn-outline-primary btn-lg px-4 rounded-pill">
+          <span>View All Partners</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="ms-2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Solutions Section -->
+  <section class="ai-solutions-section py-5 bg-white">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <div class="section-badge mb-3">
+          <span class="badge bg-primary-gradient rounded-pill px-4 py-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-2">
+              <path
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            AI Solutions
+          </span>
+        </div>
+        <h2 class="fw-bold mb-3">Transforming Businesses with Intelligent AI</h2>
+        <p class="text-muted mx-auto">Discover how our cutting-edge AI solutions can revolutionize your operations,
+          enhance customer experiences, and drive unprecedented growth.</p>
+      </div>
+
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <div class="ai-visualization">
+            <div class="ai-main-visual">
+              <div class="ai-orb">
+                <div class="ai-core">
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                </div>
+                <div class="ai-ring ring-1"></div>
+                <div class="ai-ring ring-2"></div>
+                <div class="ai-ring ring-3"></div>
+                <div class="ai-particle particle-1"></div>
+                <div class="ai-particle particle-2"></div>
+                <div class="ai-particle particle-3"></div>
+                <div class="ai-particle particle-4"></div>
+              </div>
+              <div class="ai-data-streams">
+                <div class="data-stream stream-1"></div>
+                <div class="data-stream stream-2"></div>
+                <div class="data-stream stream-3"></div>
+                <div class="data-stream stream-4"></div>
+              </div>
+            </div>
+
+            <div class="ai-stats mt-5">
+              <div class="row g-4">
+                <div class="col-6">
+                  <div class="stat-item text-center p-3">
+                    <div class="stat-icon mb-2">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="#3B82F6">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                      </svg>
+                    </div>
+                    <div class="stat-value fw-bold">40%</div>
+                    <div class="stat-label text-muted small">Faster Processing</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-item text-center p-3">
+                    <div class="stat-icon mb-2">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="#10B981">
+                        <path
+                          d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                      </svg>
+                    </div>
+                    <div class="stat-value fw-bold">99.9%</div>
+                    <div class="stat-label text-muted small">Accuracy Rate</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="ai-faq-wrapper">
+            <div class="ai-faq-header mb-4">
+              <h3 class="fw-bold">Frequently Asked Questions</h3>
+              <p class="text-muted mb-0">Get answers to common questions about our AI solutions</p>
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <div class="d-flex align-items-center w-100">
+                      <div class="question-icon me-3">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#0B3881">
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" />
+                        </svg>
+                      </div>
+                      <span class="fw-semibold">What services do AI Solution provide?</span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua.</p>
+                    <div class="mt-2">
+                      <span class="badge bg-primary-subtle text-primary me-2">Machine Learning</span>
+                      <span class="badge bg-primary-subtle text-primary me-2">NLP</span>
+                      <span class="badge bg-primary-subtle text-primary">Computer Vision</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="d-flex align-items-center w-100">
+                      <div class="question-icon me-3">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#0B3881">
+                          <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                        </svg>
+                      </div>
+                      <span class="fw-semibold">What is the pricing plan?</span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat.</p>
+                    <ul class="mb-0">
+                      <li><strong>Starter Plan:</strong> $1,999/month</li>
+                      <li><strong>Growth Plan:</strong> $4,999/month</li>
+                      <li><strong>Enterprise Plan:</strong> Custom pricing</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div class="d-flex align-items-center w-100">
+                      <div class="question-icon me-3">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#0B3881">
+                          <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
+                        </svg>
+                      </div>
+                      <span class="fw-semibold">Where do we locate?</span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.</p>
+                    <div class="row mt-2">
+                      <div class="col-6">
+                        <ul class="mb-0">
+                          <li>Sunderland, UK</li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="ai-cta mt-4 p-4 rounded-3 bg-gradient-light">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <h6 class="fw-bold mb-1">Ready to implement AI?</h6>
+                  <p class="text-muted mb-0 small">Schedule a free consultation with our experts</p>
+                </div>
+                <a href="#" class="btn btn-primary rounded-pill px-4">
+                  Book a Call
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="ms-2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <a class="btn btn-primary mt-3" href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section py-5">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header text-center mb-5">
+        <div class="section-subtitle mb-3">
+          <span class="badge bg-primary-gradient rounded-pill px-4 py-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-2">
+              <path
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            Our Popular Services
+          </span>
+        </div>
+        <h2 class="fw-bold mb-3">AI Solutions That Drive Results</h2>
+        <p class="text-muted mx-auto">Cutting-edge AI services designed to transform your business operations and
+          deliver measurable impact</p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop"
+                alt="Machine Learning" class="service-image">
+              <div class="service-overlay"></div>
+              <div class="service-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5">
+                  <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+            </div>
+            <div class="service-content">
+              <h4 class="service-title fw-bold mb-3">Machine Learning</h4>
+              <p class="service-description text-muted mb-4">
+                Build intelligent systems that learn from data and improve over time without explicit programming.
+              </p>
+              <div class="service-features mb-4">
+                <span class="feature-tag">Predictive Analytics</span>
+                <span class="feature-tag">Pattern Recognition</span>
+                <span class="feature-tag">Automated Decision Making</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="service-pricing">
+                  <span class="price fw-bold">From $2,999</span>
+                  <span class="duration text-muted">/month</span>
+                </div>
+                <a href="#" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceModal1">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="service-ribbon">
+              <span>Most Popular</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065&auto=format&fit=crop"
+                alt="Natural Language Processing" class="service-image">
+              <div class="service-overlay"></div>
+              <div class="service-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5">
+                  <path
+                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+            </div>
+            <div class="service-content">
+              <h4 class="service-title fw-bold mb-3">Natural Language Processing</h4>
+              <p class="service-description text-muted mb-4">
+                Enable machines to understand, interpret, and respond to human language with context awareness.
+              </p>
+              <div class="service-features mb-4">
+                <span class="feature-tag">Chatbots</span>
+                <span class="feature-tag">Sentiment Analysis</span>
+                <span class="feature-tag">Text Generation</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="service-pricing">
+                  <span class="price fw-bold">From $1,999</span>
+                  <span class="duration text-muted">/month</span>
+                </div>
+                <a href="#" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceModal2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop"
+                alt="Computer Vision" class="service-image">
+              <div class="service-overlay"></div>
+              <div class="service-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5">
+                  <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="service-content">
+              <h4 class="service-title fw-bold mb-3">Computer Vision</h4>
+              <p class="service-description text-muted mb-4">
+                Extract meaningful information from visual inputs for automated inspection, recognition, and analysis.
+              </p>
+              <div class="service-features mb-4">
+                <span class="feature-tag">Object Detection</span>
+                <span class="feature-tag">Image Recognition</span>
+                <span class="feature-tag">Video Analytics</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="service-pricing">
+                  <span class="price fw-bold">From $3,499</span>
+                  <span class="duration text-muted">/month</span>
+                </div>
+                <a href="#" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceModal3">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                alt="Predictive Analytics" class="service-image">
+              <div class="service-overlay"></div>
+              <div class="service-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+            </div>
+            <div class="service-content">
+              <h4 class="service-title fw-bold mb-3">Predictive Analytics</h4>
+              <p class="service-description text-muted mb-4">
+                Forecast future trends and behaviors using historical data to make proactive business decisions.
+              </p>
+              <div class="service-features mb-4">
+                <span class="feature-tag">Forecasting</span>
+                <span class="feature-tag">Risk Analysis</span>
+                <span class="feature-tag">Trend Prediction</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="service-pricing">
+                  <span class="price fw-bold">From $2,499</span>
+                  <span class="duration text-muted">/month</span>
+                </div>
+                <a href="#" class="service-link" data-bs-toggle="modal" data-bs-target="#serviceModal4">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="service-ribbon new">
+              <span>New Service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="text-center mt-5">
+        <a href="services.html" class="btn btn-primary btn-lg px-5 rounded-pill fw-semibold">
+          <span>View All Services</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="ms-2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section">
+    <div class="container">
+      <!-- Portfolio Header -->
+      <div class="portfolio-header">
+        <div class="section-subtitle mb-3">
+          <span class="badge bg-primary-gradient rounded-pill px-4 py-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-2">
+              <path
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            Our History
+          </span>
+        </div>
+
+        <h3 class="fw-bold mb-3">Explore Our Portfolio</h3>
+        <p class="portfolio-subtitle text-muted">
+          Discover how we transform businesses with cutting-edge AI solutions.
+          Each project showcases our expertise and commitment to excellence.
+        </p>
+
+        <!-- Portfolio Tags -->
+        <div class="portfolio-tags">
+          <span class="portfolio-tag active">All Projects</span>
+          <span class="portfolio-tag">Machine Learning</span>
+          <span class="portfolio-tag">Computer Vision</span>
+          <span class="portfolio-tag">NLP</span>
+          <span class="portfolio-tag">Predictive Analytics</span>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid - 2x2 Layout -->
+      <div class="portfolio-grid">
+        <!-- Portfolio Item 1 -->
+        <div class="portfolio-item">
+          <div class="portfolio-badge featured">Featured</div>
+          <div class="portfolio-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2074&auto=format&fit=crop"
+              alt="AI-Powered Retail Analytics" class="portfolio-image">
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">TensorFlow</span>
+                  <span class="tech-tag">AWS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-category">Retail Analytics</div>
+            <h4>AI-Powered Customer Behavior Prediction</h4>
+            <p class="portfolio-description">
+              Advanced ML system predicting customer purchasing patterns with 92% accuracy,
+              increasing retail revenue by 35% through personalized marketing.
+            </p>
+            <div class="portfolio-features">
+              <span class="portfolio-feature">Real-time Analytics</span>
+              <span class="portfolio-feature">Personalization</span>
+            </div>
+            <div class="portfolio-stats">
+              <div class="stat-item">
+                <span class="stat-value">35%</span>
+                <span class="stat-label">Revenue Increase</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">92%</span>
+                <span class="stat-label">Accuracy</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">4.8x</span>
+                <span class="stat-label">ROI</span>
+              </div>
+            </div>
+            <a href="#" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="portfolio-item">
+          <div class="portfolio-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop"
+              alt="Healthcare Diagnosis System" class="portfolio-image">
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-tech-stack">
+                  <span class="tech-tag">PyTorch</span>
+                  <span class="tech-tag">OpenCV</span>
+                  <span class="tech-tag">Azure</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-category">Healthcare</div>
+            <h4>Medical Image Analysis System</h4>
+            <p class="portfolio-description">
+              Computer vision system detecting anomalies in medical scans with 98.5% accuracy,
+              reducing diagnosis time by 70% for healthcare providers.
+            </p>
+            <div class="portfolio-features">
+              <span class="portfolio-feature">Medical Imaging</span>
+              <span class="portfolio-feature">Real-time Detection</span>
+            </div>
+            <div class="portfolio-stats">
+              <div class="stat-item">
+                <span class="stat-value">98.5%</span>
+                <span class="stat-label">Accuracy</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">70%</span>
+                <span class="stat-label">Time Saved</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">FDA</span>
+                <span class="stat-label">Approved</span>
+              </div>
+            </div>
+            <a href="#" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="portfolio-item">
+          <div class="portfolio-badge new">New</div>
+          <div class="portfolio-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+              alt="Financial Fraud Detection" class="portfolio-image">
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-tech-stack">
+                  <span class="tech-tag">Scikit-learn</span>
+                  <span class="tech-tag">Kafka</span>
+                  <span class="tech-tag">GCP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-category">Finance</div>
+            <h4>Real-time Fraud Detection AI</h4>
+            <p class="portfolio-description">
+              Predictive analytics identifying fraudulent transactions in real-time,
+              saving financial institutions $12M annually with 99.8% accuracy.
+            </p>
+            <div class="portfolio-features">
+              <span class="portfolio-feature">Real-time Analysis</span>
+              <span class="portfolio-feature">Anomaly Detection</span>
+            </div>
+            <div class="portfolio-stats">
+              <div class="stat-item">
+                <span class="stat-value">99.8%</span>
+                <span class="stat-label">Accuracy</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">$12M</span>
+                <span class="stat-label">Saved</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">50ms</span>
+                <span class="stat-label">Response</span>
+              </div>
+            </div>
+            <a href="#" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 4 -->
+        <div class="portfolio-item">
+          <div class="portfolio-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065&auto=format&fit=crop"
+              alt="Customer Service Chatbot" class="portfolio-image">
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-tech-stack">
+                  <span class="tech-tag">BERT</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">AWS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-category">Customer Service</div>
+            <h4>Intelligent Chatbot Platform</h4>
+            <p class="portfolio-description">
+              NLP system handling customer inquiries in 12 languages, reducing support costs by 60%
+              while maintaining 95% customer satisfaction rates.
+            </p>
+            <div class="portfolio-features">
+              <span class="portfolio-feature">Multilingual</span>
+              <span class="portfolio-feature">Sentiment Analysis</span>
+            </div>
+            <div class="portfolio-stats">
+              <div class="stat-item">
+                <span class="stat-value">60%</span>
+                <span class="stat-label">Cost Reduced</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">12</span>
+                <span class="stat-label">Languages</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">95%</span>
+                <span class="stat-label">Satisfaction</span>
+              </div>
+            </div>
+            <a href="#" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="portfolio-cta">
+        <a href="history.html" class="btn btn-primary btn-lg px-5 rounded-pill fw-semibold">
+          <span>View All Projects</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="ms-2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="portfolio-background">
+      <div class="portfolio-bg-element"></div>
+      <div class="portfolio-bg-element"></div>
+      <div class="portfolio-bg-element"></div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-wrapper">
+        <div class="cta-content">
+          <div class="cta-badge mb-3">
+            <span class="badge bg-primary-gradient rounded-pill px-4 py-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-2">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Ready to Start
+            </span>
+          </div>
+          <h2 class="cta-title fw-bold mb-3">
+            Have an AI Project in Mind?<br>
+            <span class="text-primary-gradient">Let's Build It Together</span>
+          </h2>
+          <p class="cta-description text-muted mb-4">
+            Transform your ideas into intelligent solutions. Our team of AI experts is ready to
+            collaborate with you on your next groundbreaking project.
+          </p>
+
+          <div class="cta-stats mb-4">
+            <div class="row g-3">
+              <div class="col-6 col-md-3">
+                <div class="cta-stat-item">
+                  <div class="cta-stat-value fw-bold">24/7</div>
+                  <div class="cta-stat-label">Support</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="cta-stat-item">
+                  <div class="cta-stat-value fw-bold">30-day</div>
+                  <div class="cta-stat-label">Money Back</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="cta-stat-item">
+                  <div class="cta-stat-value fw-bold">Free</div>
+                  <div class="cta-stat-label">Consultation</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="cta-stat-item">
+                  <div class="cta-stat-value fw-bold">Flexible</div>
+                  <div class="cta-stat-label">Plans</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-primary btn-lg px-5 rounded-pill fw-semibold me-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="me-2">
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+              Start Your Project
+            </a>
+            <a href="contact.html" class="btn btn-outline-primary btn-lg px-5 rounded-pill fw-semibold">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="me-2">
+                <path d="M15 5l0 14" />
+                <path d="M5 15l4-4-4-4" />
+                <path d="M19 9l-4-4-4 4" />
+                <path d="M5 5l14 14" />
+              </svg>
+              Schedule Demo
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-visual">
+          <div class="cta-visual-wrapper">
+            <div class="cta-orb">
+              <div class="cta-orb-core">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <div class="cta-orb-ring ring-1"></div>
+              <div class="cta-orb-ring ring-2"></div>
+              <div class="cta-orb-ring ring-3"></div>
+            </div>
+            <div class="cta-floating-icons">
+              <div class="floating-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#3B82F6">
+                  <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+              <div class="floating-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#10B981">
+                  <path
+                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              <div class="floating-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#F59E0B">
+                  <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <div class="floating-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#8B5CF6">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="cta-background">
+      <div class="cta-bg-element"></div>
+      <div class="cta-bg-element"></div>
+      <div class="cta-bg-element"></div>
+      <div class="cta-bg-element"></div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Footer CTA -->
+      <div class="footer-cta text-center">
+        <h4>Ready to Transform Your Business with AI?</h4>
+        <p>Join hundreds of satisfied clients who have revolutionized their operations with our AI solutions.</p>
+        <a href="contact.html" class="btn">
+          Get artarted Today
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="ms-2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-content">
+        <div class="row g-4">
+          <!-- Brand Column -->
+          <div class="col-lg-4">
+            <div class="footer-brand">
+              <div class="footer-brand-text">
+                <h4>AI Solution</h4>
+                <p>Cutting-edge AI solutions that transform businesses and drive innovation across industries.</p>
+              </div>
+            </div>
+
+            <div class="contact-info mt-4">
+              <p>
+                aisolution@gmail.com
+              </p>
+              <p>
+                +9691 2690 0020
+              </p>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-4">
+            <div class="footer-links">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="#">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    Home
+                  </a></li>
+                <li><a href="about.html">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    About Us
+                  </a></li>
+                <li><a href="services.html">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    Services
+                  </a></li>
+                <li><a href="history.html">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    Our History
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="col-lg-2 col-md-4">
+            <div class="footer-links">
+              <h5>Services</h5>
+              <ul>
+                <li><a href="#">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                    Machine Learning
+                  </a></li>
+                <li><a href="#">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                    Natural Language Processing
+                  </a></li>
+                <li><a href="#">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                    Computer Vision
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Location Map -->
+          <div class="col-lg-4 col-md-12">
+            <div class="footer-map">
+              <div class="map-placeholder"
+                style="width: 100%; height: 200px; background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);">
+                <div class="text-center">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.3)">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
+                  </svg>
+                  <p class="mt-2">Global Headquarters</p>
+                  <small>Multiple locations worldwide</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>AI Solution &copy; 2025. All rights reserved. | <a href="#" class="text-white-50">Privacy Policy</a> | <a
+            href="#" class="text-white-50">Terms of Service</a></p>
+      </div>
+
+      <!-- Background Elements -->
+      <div class="footer-background">
+        <div class="footer-bg-element"></div>
+        <div class="footer-bg-element"></div>
+        <div class="footer-bg-element"></div>
+      </div>
+  </footer>
+
+  <!-- Modals -->
+  <!-- Modal 1: Machine Learning -->
+  <div class="modal fade" id="serviceModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-md-6">
+              <div class="service-modal-image rounded-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop"
+                  alt="Machine Learning" class="w-100">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-modal-content">
+                <div class="service-badge mb-3">
+                  <span class="badge bg-primary-gradient rounded-pill px-3 py-2">Most Popular</span>
+                </div>
+                <h3 class="fw-bold mb-3">Machine Learning Solutions</h3>
+                <p class="text-muted mb-4">
+                  Our machine learning services help businesses build intelligent systems that learn from data and
+                  improve over time without explicit programming.
+                </p>
+
+                <div class="service-features mb-4">
+                  <h6 class="fw-semibold mb-3">Key Features:</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Predictive Analytics & Forecasting
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Pattern Recognition Algorithms
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Automated Decision Making Systems
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Real-time Data Processing
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-pricing mb-4">
+                  <div class="col">
+                    <h6 class="fw-semibold mb-3">Pricing plans</h6>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <div class="pricing-card p-3 rounded-3">
+                          <div class="fw-bold text-primary">Starter</div>
+                          <div class="h4 fw-bold my-2">$2,999</div>
+                          <small class="text-muted">/month</small>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="pricing-card p-3 rounded-3">
+                          <div class="fw-bold text-primary">Enterprise</div>
+                          <div class="h4 fw-bold my-2">Custom</div>
+                          <small class="text-muted">Contact us</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary w-100 rounded-pill py-3 fw-semibold">
+                  Get Started with Machine Learning
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="ms-2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Natural Language Processing -->
+  <div class="modal fade" id="serviceModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-md-6">
+              <div class="service-modal-image rounded-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065&auto=format&fit=crop"
+                  alt="Natural Language Processing" class="w-100">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-modal-content">
+                <h3 class="fw-bold mb-3">Natural Language Processing</h3>
+                <p class="text-muted mb-4">
+                  Enable machines to understand, interpret, and respond to human language with context awareness and
+                  natural conversation flow.
+                </p>
+
+                <div class="service-features mb-4">
+                  <h6 class="fw-semibold mb-3">Key Features:</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Intelligent Chatbots & Virtual Assistants
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Sentiment Analysis & Emotion Detection
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Text Generation & Summarization
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 01118 0z" />
+                      </svg>
+                      Language Translation & Localization
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-pricing mb-4">
+                  <div class="col">
+                    <h6 class="fw-semibold mb-3">Pricing plans</h6>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <div class="pricing-card p-3 rounded-3">
+                          <div class="fw-bold text-primary">Basic</div>
+                          <div class="h4 fw-bold my-2">$1,999</div>
+                          <small class="text-muted">/month</small>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="pricing-card p-3 rounded-3">
+                          <div class="fw-bold text-primary">Advanced</div>
+                          <div class="h4 fw-bold my-2">$4,499</div>
+                          <small class="text-muted">/month</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary w-100 rounded-pill py-3 fw-semibold">
+                  Explore NLP Solutions
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="ms-2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Computer Vision -->
+  <div class="modal fade" id="serviceModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-md-6">
+              <div class="service-modal-image rounded-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop"
+                  alt="Computer Vision" class="w-100">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-modal-content">
+                <h3 class="fw-bold mb-3">Computer Vision Solutions</h3>
+                <p class="text-muted mb-4">
+                  Extract meaningful information from visual inputs for automated inspection, recognition, and analysis
+                  in real-time applications.
+                </p>
+
+                <div class="service-features mb-4">
+                  <h6 class="fw-semibold mb-3">Key Features:</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Real-time Object Detection & Tracking
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Facial Recognition & Biometrics
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Image Classification & Segmentation
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Video Analytics & Surveillance
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-pricing mb-4">
+                  <div class="col">
+                    <h6 class="fw-semibold mb-3">Pricing plans</h6>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <div class="pricing-card p-3 rounded-3">
+                          <div class="fw-bold text-primary">Standard</div>
+                          <div class="h4 fw-bold my-2">$3,499</div>
+                          <small class="text-muted">/month</small>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="pricing-card p-3 rounded-3">
+                          <div class="fw-bold text-primary">Professional</div>
+                          <div class="h4 fw-bold my-2">$5,999</div>
+                          <small class="text-muted">/month</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary w-100 rounded-pill py-3 fw-semibold">
+                  Discover Vision AI
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="ms-2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Predictive Analytics -->
+  <div class="modal fade" id="serviceModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-md-6">
+              <div class="service-modal-image rounded-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                  alt="Predictive Analytics" class="w-100">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-modal-content">
+                <div class="service-badge mb-3">
+                  <span class="badge bg-success-gradient rounded-pill px-3 py-2">New Service</span>
+                </div>
+                <h3 class="fw-bold mb-3">Predictive Analytics</h3>
+                <p class="text-muted mb-4">
+                  Forecast future trends and behaviors using historical data to make proactive business decisions and
+                  optimize operations.
+                </p>
+
+                <div class="service-features mb-4">
+                  <h6 class="fw-semibold mb-3">Key Features:</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Advanced Forecasting Models
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Risk Analysis & Mitigation
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Market Trend Prediction
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Customer Behavior Insights
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-pricing mb-4">
+                  <div class="col">
+                    <h6 class="fw-semibold mb-3">Pricing plans</h6>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <div class="pricing-card p-3 rounded-3">
+                          <div class="fw-bold text-primary">Analyst</div>
+                          <div class="h4 fw-bold my-2">$2,499</div>
+                          <small class="text-muted">/month</small>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="pricing-card p-3 rounded-3">
+                          <div class="fw-bold text-primary">Enterprise</div>
+                          <div class="h4 fw-bold my-2">Custom</div>
+                          <small class="text-muted">Contact us</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary w-100 rounded-pill py-3 fw-semibold">
+                  Start Predicting
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="ms-2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Portfolio Modals -->
+  <!-- Modal 1: Retail Analytics -->
+  <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <div class="portfolio-modal-image rounded-4 overflow-hidden position-relative">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2074&auto=format&fit=crop"
+                  alt="Retail Analytics" class="w-100">
+                <div class="portfolio-modal-badge">
+                  <span class="badge bg-primary-gradient px-3 py-2">Featured Project</span>
+                </div>
+              </div>
+
+              <div class="portfolio-tech-stack mt-4">
+                <h6 class="fw-semibold mb-3">Technology Stack</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tech-tag-modal">Python</span>
+                  <span class="tech-tag-modal">TensorFlow</span>
+                  <span class="tech-tag-modal">React</span>
+                  <span class="tech-tag-modal">AWS SageMaker</span>
+                  <span class="tech-tag-modal">PostgreSQL</span>
+                  <span class="tech-tag-modal">Kafka</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="portfolio-modal-content">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill">Retail Analytics</span>
+                  <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill">Completed</span>
+                  <span class="text-muted">6 months</span>
+                </div>
+
+                <h3 class="fw-bold mb-4">AI-Powered Customer Behavior Prediction</h3>
+
+                <div class="portfolio-stats-modal mb-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">35%</div>
+                        <div class="stat-label-modal text-muted">Revenue Increase</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">92%</div>
+                        <div class="stat-label-modal text-muted">Prediction Accuracy</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">4.8x</div>
+                        <div class="stat-label-modal text-muted">ROI</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">40%</div>
+                        <div class="stat-label-modal text-muted">Cost Reduction</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-description-modal mb-4">
+                  <h6 class="fw-semibold mb-3">Project Overview</h6>
+                  <p class="text-muted">
+                    Developed an advanced machine learning system that predicts customer purchasing patterns
+                    with 92% accuracy. The solution integrates real-time analytics with historical data to
+                    provide actionable insights for inventory management and personalized marketing campaigns.
+                  </p>
+                </div>
+
+                <div class="portfolio-features-modal mb-4">
+                  <h6 class="fw-semibold mb-3">Key Features</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Real-time customer behavior prediction
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Personalized recommendation engine
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Inventory optimization algorithms
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Multi-channel data integration
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="portfolio-client-info mb-4">
+                  <h6 class="fw-semibold mb-3">Client Feedback</h6>
+                  <div class="card border-0 bg-light">
+                    <div class="card-body">
+                      <p class="mb-3 fst-italic text-muted">
+                        "The AI solution transformed our retail operations. We've seen a 35% increase in revenue
+                        and significantly improved customer satisfaction scores."
+                      </p>
+                      <div class="d-flex align-items-center">
+                        <div class="me-3">
+                          <div
+                            class="avatar-sm bg-primary rounded-circle d-flex align-items-center justify-content-center text-white">
+                            JD
+                          </div>
+                        </div>
+                        <div>
+                          <div class="fw-semibold">John Davis</div>
+                          <small class="text-muted">CTO, RetailChain Inc.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-cta-modal">
+                  <a href="contact.html" class="btn btn-primary w-100 rounded-pill py-3 fw-semibold">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="me-2">
+                      <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Request Similar Solution
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Healthcare Diagnosis System -->
+  <div class="modal fade" id="portfolioModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <div class="portfolio-modal-image rounded-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop"
+                  alt="Healthcare Diagnosis System" class="w-100">
+              </div>
+
+              <div class="portfolio-tech-stack mt-4">
+                <h6 class="fw-semibold mb-3">Technology Stack</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tech-tag-modal">PyTorch</span>
+                  <span class="tech-tag-modal">OpenCV</span>
+                  <span class="tech-tag-modal">Docker</span>
+                  <span class="tech-tag-modal">Azure</span>
+                  <span class="tech-tag-modal">FastAPI</span>
+                  <span class="tech-tag-modal">PostgreSQL</span>
+                </div>
+              </div>
+
+              <div class="certifications mt-4">
+                <h6 class="fw-semibold mb-3">Certifications & Compliance</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-success-gradient px-3 py-2">FDA Approved</span>
+                  <span class="badge bg-primary-subtle text-primary px-3 py-2">HIPAA Compliant</span>
+                  <span class="badge bg-info-subtle text-info px-3 py-2">CE Marked</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="portfolio-modal-content">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill">Healthcare</span>
+                  <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill">Live Production</span>
+                  <span class="text-muted">8 months</span>
+                </div>
+
+                <h3 class="fw-bold mb-4">Medical Image Analysis System</h3>
+
+                <div class="portfolio-stats-modal mb-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">98.5%</div>
+                        <div class="stat-label-modal text-muted">Detection Accuracy</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">70%</div>
+                        <div class="stat-label-modal text-muted">Diagnosis Time Saved</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">25k+</div>
+                        <div class="stat-label-modal text-muted">Scans Analyzed</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">0.02%</div>
+                        <div class="stat-label-modal text-muted">False Positive Rate</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-description-modal mb-4">
+                  <h6 class="fw-semibold mb-3">Project Overview</h6>
+                  <p class="text-muted">
+                    Developed a computer vision system that detects anomalies in medical scans with
+                    98.5% accuracy. The system supports CT scans, MRIs, and X-rays, providing
+                    radiologists with AI-assisted diagnosis capabilities. FDA-approved for clinical use.
+                  </p>
+                </div>
+
+                <div class="portfolio-features-modal mb-4">
+                  <h6 class="fw-semibold mb-3">Key Features</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Multi-modality image analysis (CT, MRI, X-ray)
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Real-time anomaly detection
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      HIPAA-compliant data security
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Integration with hospital PACS systems
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="portfolio-client-info mb-4">
+                  <h6 class="fw-semibold mb-3">Client Testimonial</h6>
+                  <div class="card border-0 bg-light">
+                    <div class="card-body">
+                      <p class="mb-3 fst-italic text-muted">
+                        "This AI system has revolutionized our diagnostic workflow. We're detecting conditions
+                        earlier and with greater accuracy, ultimately saving lives."
+                      </p>
+                      <div class="d-flex align-items-center">
+                        <div class="me-3">
+                          <div
+                            class="avatar-sm bg-primary rounded-circle d-flex align-items-center justify-content-center text-white">
+                            SM
+                          </div>
+                        </div>
+                        <div>
+                          <div class="fw-semibold">Dr. Sarah Miller</div>
+                          <small class="text-muted">Chief Radiologist, City General Hospital</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-cta-modal">
+                  <a href="contact.html" class="btn btn-primary w-100 rounded-pill py-3 fw-semibold">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="me-2">
+                      <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Request Similar Solution
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Financial Fraud Detection -->
+  <div class="modal fade" id="portfolioModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <div class="portfolio-modal-image rounded-4 overflow-hidden position-relative">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                  alt="Financial Fraud Detection" class="w-100">
+                <div class="portfolio-modal-badge">
+                  <span class="badge bg-warning-gradient px-3 py-2">New Project</span>
+                </div>
+              </div>
+
+              <div class="portfolio-tech-stack mt-4">
+                <h6 class="fw-semibold mb-3">Technology Stack</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tech-tag-modal">Scikit-learn</span>
+                  <span class="tech-tag-modal">FastAPI</span>
+                  <span class="tech-tag-modal">Kafka</span>
+                  <span class="tech-tag-modal">Google Cloud</span>
+                  <span class="tech-tag-modal">Redis</span>
+                  <span class="tech-tag-modal">Apache Spark</span>
+                </div>
+              </div>
+
+              <div class="compliance mt-4">
+                <h6 class="fw-semibold mb-3">Compliance Standards</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-primary-subtle text-primary px-3 py-2">PCI DSS</span>
+                  <span class="badge bg-success-subtle text-success px-3 py-2">SOC 2</span>
+                  <span class="badge bg-info-subtle text-info px-3 py-2">GDPR</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="portfolio-modal-content">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill">Finance</span>
+                  <span class="badge bg-warning-subtle text-warning px-3 py-2 rounded-pill">In Development</span>
+                  <span class="text-muted">4 months</span>
+                </div>
+
+                <h3 class="fw-bold mb-4">Real-time Fraud Detection AI</h3>
+
+                <div class="portfolio-stats-modal mb-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">99.8%</div>
+                        <div class="stat-label-modal text-muted">Detection Accuracy</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">$12M</div>
+                        <div class="stat-label-modal text-muted">Fraud Prevention</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">50ms</div>
+                        <div class="stat-label-modal text-muted">Response Time</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">0.01%</div>
+                        <div class="stat-label-modal text-muted">False Decline Rate</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-description-modal mb-4">
+                  <h6 class="fw-semibold mb-3">Project Overview</h6>
+                  <p class="text-muted">
+                    Built a predictive analytics system that identifies fraudulent transactions
+                    in real-time across multiple banking channels. The system processes over
+                    1 million transactions daily with sub-50ms response time, saving financial
+                    institutions significant losses.
+                  </p>
+                </div>
+
+                <div class="portfolio-features-modal mb-4">
+                  <h6 class="fw-semibold mb-3">Key Features</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Real-time transaction monitoring
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Behavioral pattern recognition
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Multi-factor risk scoring
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 01118 0z" />
+                      </svg>
+                      Regulatory reporting automation
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="portfolio-client-info mb-4">
+                  <h6 class="fw-semibold mb-3">Client Feedback</h6>
+                  <div class="card border-0 bg-light">
+                    <div class="card-body">
+                      <p class="mb-3 fst-italic text-muted">
+                        "The fraud detection system has saved us millions while improving customer
+                        experience. The real-time processing is particularly impressive."
+                      </p>
+                      <div class="d-flex align-items-center">
+                        <div class="me-3">
+                          <div
+                            class="avatar-sm bg-primary rounded-circle d-flex align-items-center justify-content-center text-white">
+                            RJ
+                          </div>
+                        </div>
+                        <div>
+                          <div class="fw-semibold">Robert Johnson</div>
+                          <small class="text-muted">Head of Security, Global Bank Corp.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-cta-modal">
+                  <a href="contact.html" class="btn btn-primary w-100 rounded-pill py-3 fw-semibold">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="me-2">
+                      <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Request Similar Solution
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Customer Service Chatbot -->
+  <div class="modal fade" id="portfolioModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <div class="portfolio-modal-image rounded-4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065&auto=format&fit=crop"
+                  alt="Customer Service Chatbot" class="w-100">
+              </div>
+
+              <div class="portfolio-tech-stack mt-4">
+                <h6 class="fw-semibold mb-3">Technology Stack</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tech-tag-modal">BERT</span>
+                  <span class="tech-tag-modal">Node.js</span>
+                  <span class="tech-tag-modal">Redis</span>
+                  <span class="tech-tag-modal">AWS Lambda</span>
+                  <span class="tech-tag-modal">MongoDB</span>
+                  <span class="tech-tag-modal">WebSocket</span>
+                </div>
+              </div>
+
+              <div class="languages mt-4">
+                <h6 class="fw-semibold mb-3">Supported Languages</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-light text-dark px-3 py-2">English</span>
+                  <span class="badge bg-light text-dark px-3 py-2">Spanish</span>
+                  <span class="badge bg-light text-dark px-3 py-2">French</span>
+                  <span class="badge bg-light text-dark px-3 py-2">German</span>
+                  <span class="badge bg-light text-dark px-3 py-2">Chinese</span>
+                  <span class="badge bg-light text-dark px-3 py-2">Japanese</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="portfolio-modal-content">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill">Customer Service</span>
+                  <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill">Active Deployment</span>
+                  <span class="text-muted">5 months</span>
+                </div>
+
+                <h3 class="fw-bold mb-4">Intelligent Chatbot Platform</h3>
+
+                <div class="portfolio-stats-modal mb-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">60%</div>
+                        <div class="stat-label-modal text-muted">Cost Reduction</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">95%</div>
+                        <div class="stat-label-modal text-muted">Customer Satisfaction</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">12</div>
+                        <div class="stat-label-modal text-muted">Languages</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-card-modal p-3 rounded-3">
+                        <div class="stat-value-modal display-6 fw-bold text-primary">24/7</div>
+                        <div class="stat-label-modal text-muted">Support Coverage</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-description-modal mb-4">
+                  <h6 class="fw-semibold mb-3">Project Overview</h6>
+                  <p class="text-muted">
+                    Created a Natural Language Processing system that handles customer inquiries
+                    in 12 languages. The chatbot integrates with existing CRM systems and provides
+                    sentiment analysis, intent recognition, and automated ticket routing, reducing
+                    support costs by 60% while maintaining high customer satisfaction.
+                  </p>
+                </div>
+
+                <div class="portfolio-features-modal mb-4">
+                  <h6 class="fw-semibold mb-3">Key Features</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Multilingual natural language understanding
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Sentiment analysis and emotion detection
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Seamless human-agent handoff
+                    </li>
+                    <li class="mb-2">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#10B981" class="me-2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Integration with CRM and ticketing systems
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="portfolio-client-info mb-4">
+                  <h6 class="fw-semibold mb-3">Client Testimonial</h6>
+                  <div class="card border-0 bg-light">
+                    <div class="card-body">
+                      <p class="mb-3 fst-italic text-muted">
+                        "The chatbot has transformed our customer service operations. We're handling
+                        3x more inquiries with the same team size while maintaining 95% satisfaction rates."
+                      </p>
+                      <div class="d-flex align-items-center">
+                        <div class="me-3">
+                          <div
+                            class="avatar-sm bg-primary rounded-circle d-flex align-items-center justify-content-center text-white">
+                            EW
+                          </div>
+                        </div>
+                        <div>
+                          <div class="fw-semibold">Emma Wilson</div>
+                          <small class="text-muted">Customer Experience Director, TechGlobal</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-cta-modal">
+                  <a href="#" class="btn btn-primary w-100 rounded-pill py-3 fw-semibold">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="me-2">
+                      <path
+                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    Request similar solution
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  // Add this script before closing
+</body> tag
+<script>
+  // Header scroll effect
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+
+</html>

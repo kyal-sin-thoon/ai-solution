@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/styles/common.css">
+  <link rel="stylesheet" href="assets/styles/admin.css">
+  <link rel="stylesheet" href="assets/styles/admin-dashboard.css">
+  <link rel="stylesheet" href="admin-dashboard.css">
+
+  <title>Admin Dashboard | AI Solution</title>
+  <link rel="icon" href="img/logo_w_bg.png">
+
+</head>
+
+<body>
+  <!-- Admin Header -->
+  <header class="admin-header">
+    <nav class="navbar navbar-expand-lg bg-white nav-shadow">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.jpg" width="45" height="45" class="mx-3" />
+            AI Solution
+          </a>
+          <span class="badge bg-primary ms-3">
+            <i class="bi bi-clock me-1"></i>
+            <span id="serverTime">--:--</span>
+          </span>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <button class="btn btn-primary me-3" onclick="fetchContacts()">
+            <i class="bi bi-arrow-clockwise me-1"></i> Refresh
+          </button>
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle me-1"></i>
+              <span id="adminName">Admin User</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2"></i>Home</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-danger logout-btn" href="#"><i
+                    class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="admin-content" id="adminContent">
+    <!-- Welcome Card -->
+    <div class="container mb-4">
+      <div class="welcome-card">
+        <div class="welcome-content">
+          <div class="welcome-icon">
+            <i class="bi bi-robot"></i>
+          </div>
+          <div class="welcome-text">
+            <h4>Welcome back, <span id="welcomeUser">Admin</span>!</h4>
+            <p>You have <span class="badge-count" id="pendingCount">0</span> new urgent messages requiring your
+              attention.</p>
+          </div>
+        </div>
+        <div class="welcome-stats">
+          <div class="stat-item">
+            <span class="stat-label">Today</span>
+            <span class="stat-value" id="todayCount">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Response Rate</span>
+            <span class="stat-value" id="responseRate">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-xl-3 col-md-6">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="bi bi-envelope-paper"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number" id="totalContacts">0</h3>
+              <p class="stat-label">Total Submissions</p>
+              <div class="stat-change" id="totalChange">
+                <i class="bi bi-graph-up-arrow"></i>
+                <span>Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="bi bi-envelope-paper"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number" id="contactedCount">0</h3>
+              <p class="stat-label">Responded</p>
+              <div class="stat-change positive">
+                <i class="bi bi-check-circle-fill"></i>
+                <span id="responseRateStat">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="bi bi-hourglass-split"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number" id="newCount">0</h3>
+              <p class="stat-label">Pending Review</p>
+              <div class="stat-change warning">
+                <i class="bi bi-exclamation-triangle"></i>
+                <span>Action Required</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="bi bi-calendar2-week"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number" id="todayCountStat">0</h3>
+              <p class="stat-label">Today's Submissions</p>
+              <div class="stat-change positive">
+                <i class="bi bi-lightning-charge"></i>
+                <span id="todayChange">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="container">
+      <div class="filter-card mb-4">
+        <div class="filter-header">
+          <h5><i class="bi bi-funnel me-2"></i>Filter & Search</h5>
+          <div class="filter-actions">
+            <button class="btn btn-clear" onclick="clearFilters()">
+              <i class="bi bi-eraser me-1"></i>Clear filters
+            </button>
+            <button class="btn btn-add-lead" data-bs-toggle="modal" data-bs-target="#addLeadModal">
+              <i class="bi bi-plus-circle me-1"></i>Add New Lead
+            </button>
+          </div>
+        </div>
+        <div class="filter-body">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label class="form-label"><i class="bi bi-tag me-1"></i>Status</label>
+              <div class="filter-select-wrapper">
+                <select class="form-select filter-select" id="filterStatus" onchange="filterTable()">
+                  <option value="">All Status</option>
+                  <option value="new">New</option>
+                  <option value="contacted">Contacted</option>
+                </select>
+                <i class="bi bi-chevron-down select-arrow"></i>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label"><i class="bi bi-briefcase me-1"></i>Service</label>
+              <div class="filter-select-wrapper">
+                <select class="form-select filter-select" id="filterService" onchange="filterTable()">
+                  <option value="">All Services</option>
+                  <option value="machine-learning">Machine Learning</option>
+                  <option value="nlp">NLP</option>
+                  <option value="computer-vision">Computer Vision</option>
+                  <option value="ai-consulting">AI Consulting</option>
+                  <option value="custom-development">Custom Dev</option>
+                </select>
+                <i class="bi bi-chevron-down select-arrow"></i>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label"><i class="bi bi-calendar me-1"></i>Date Range</label>
+              <div class="filter-select-wrapper">
+                <select class="form-select filter-select" id="filterDate" onchange="filterTable()">
+                  <option value="">All Time</option>
+                  <option value="today">Today</option>
+                  <option value="week">This Week</option>
+                  <option value="month">This Month</option>
+                </select>
+                <i class="bi bi-chevron-down select-arrow"></i>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label"><i class="bi bi-sort-down me-1"></i>Sort By</label>
+              <div class="filter-select-wrapper">
+                <select class="form-select filter-select" id="sortBy" onchange="sortTable()">
+                  <option value="date-desc">Date (Newest First)</option>
+                  <option value="date-asc">Date (Oldest First)</option>
+                  <option value="name-asc">Name (A-Z)</option>
+                  <option value="name-desc">Name (Z-A)</option>
+                </select>
+                <i class="bi bi-chevron-down select-arrow"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 mt-3">
+            <div class="col-md-12">
+              <div class="search-wrapper">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="form-control search-input"
+                  placeholder="Search by name, email, company, or phone..." id="searchInput" onkeyup="searchTable()">
+                <button class="search-clear" onclick="clearSearch()">
+                  <i class="bi bi-x"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-container">
+      <div class="table-header">
+        <div class="table-title">
+          <i class="bi bi-table table-icon"></i>
+          <div>
+            <h4>Contact Form Submissions</h4>
+            <p class="table-subtitle">Manage and monitor all incoming leads</p>
+          </div>
+          <span class="table-badge" id="totalCount">0</span>
+        </div>
+        <div class="table-actions">
+          <div class="export-options">
+            <button class="btn btn-export">
+              <i class="bi bi-download me-2"></i>Export
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="table" id="contactsTable">
+          <thead>
+            <tr>
+              <th class="select-column">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="selectAll">
+                  <label class="form-check-label" for="selectAll"></label>
+                </div>
+              </th>
+              <th onclick="sortColumn('fullName')" class="sortable">
+                <span>Contact</span>
+                <i class="bi bi-arrow-down-up sort-icon"></i>
+              </th>
+              <th class="sortable" onclick="sortColumn('email')">
+                <span>Contact Info</span>
+                <i class="bi bi-arrow-down-up sort-icon"></i>
+              </th>
+              <th class="sortable" onclick="sortColumn('company')">
+                <span>Company Details</span>
+                <i class="bi bi-arrow-down-up sort-icon"></i>
+              </th>
+              <th class="sortable" onclick="sortColumn('serviceInterest')">
+                <span>Service Interest</span>
+                <i class="bi bi-arrow-down-up sort-icon"></i>
+              </th>
+              <th class="sortable" onclick="sortColumn('country')">
+                <span>Location</span>
+                <i class="bi bi-arrow-down-up sort-icon"></i>
+              </th>
+              <th class="sortable" onclick="sortColumn('status')">
+                <span>Status</span>
+                <i class="bi bi-arrow-down-up sort-icon"></i>
+              </th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="contactsBody">
+            <!-- Data loaded by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-footer">
+        <div class="selection-panel">
+          <div class="selected-info">
+            <div class="selected-count">
+              <i class="bi bi-check-circle-fill"></i>
+              <span id="selectedCount">0</span> selected
+            </div>
+          </div>
+          <div class="selection-actions">
+            <button class="btn btn-action btn-mark" onclick="markAsContacted()" id="markContactedBtn" disabled>
+              <i class="bi bi-chat-left-text"></i>
+              <span>Mark Contacted</span>
+            </button>
+            <button class="btn btn-action btn-delete" onclick="deleteSelected()" disabled id="deleteSelectedBtn">
+              <i class="bi bi-trash3"></i>
+              <span>Delete</span>
+            </button>
+          </div>
+        </div>
+        <div class="pagination-panel">
+          <div class="pagination-info">
+            <span>Showing <strong id="showingCount">0-0</strong> of <strong id="totalItems">0</strong> contacts</span>
+          </div>
+          <div class="pagination-controls">
+            <button class="btn btn-pagination" onclick="changePage(-1)" id="prevBtn" disabled>
+              <i class="bi bi-chevron-left"></i>
+              <span>Previous</span>
+            </button>
+            <div class="page-indicator">
+              <span>Page</span>
+              <span class="current-page" id="currentPage">1</span>
+              <span>of <span id="totalPages">1</span></span>
+            </div>
+            <button class="btn btn-pagination" onclick="changePage(1)" id="nextBtn" disabled>
+              <span>Next</span>
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal for Viewing Submission Details -->
+  <div class="modal fade" id="viewSubmissionModal" tabindex="-1" aria-labelledby="viewSubmissionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <div class="modal-avatar">
+              <i class="bi bi-person-circle"></i>
+            </div>
+            <div>
+              <h5 class="modal-title" id="viewSubmissionModalLabel">Contact Details</h5>
+              <p class="modal-subtitle">Full contact information and project details of customers</p>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="submissionDetails">
+          Loading details...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle me-1"></i>Close
+          </button>
+          <button type="button" class="btn btn-primary" onclick="contactLead()" id="contactLeadBtn">
+            <i class="bi bi-telephone-outbound me-1"></i>Contact Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Adding New Lead -->
+  <div class="modal fade" id="addLeadModal" tabindex="-1" aria-labelledby="addLeadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addLeadModalLabel">
+            <i class="bi bi-person-plus me-2"></i>Add New Lead
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addLeadForm">
+            <div class="mb-3">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-control" id="leadName" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="leadEmail" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="leadPhone">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Company</label>
+              <input type="text" class="form-control" id="leadCompany">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Service Interest</label>
+              <select class="form-select" id="leadService">
+                <option value="machine-learning">Machine Learning</option>
+                <option value="nlp">Natural Language Processing</option>
+                <option value="computer-vision">Computer Vision</option>
+                <option value="ai-consulting">AI Consulting</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Notes</label>
+              <textarea class="form-control" id="leadNotes" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle me-1"></i>Cancel
+          </button>
+          <button type="button" class="btn btn-primary" onclick="addNewLead()">
+            <i class="bi bi-person-plus me-1"></i>Add Lead
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Status Update Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="statusToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" id="toastTitle">Notification</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="toastMessage">
+        Operation completed successfully.
+      </div>
+    </div>
+  </div>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Base API URL
+    const API_BASE_URL = 'http://localhost:3000/api';
+    let currentData = [];
+    let filteredData = [];
+    let currentPage = 1;
+    const pageSize = 10;
+    let selectedIds = new Set();
+
+    // Check if user is logged in
+    function checkLogin() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      const adminUser = localStorage.getItem('adminUser');
+
+      if (!isLoggedIn || isLoggedIn !== 'true') {
+        alert('⚠️ Please login first!');
+        window.location.href = 'admin.html';
+        return false;
+      }
+
+      try {
+        const user = JSON.parse(adminUser);
+        document.getElementById('adminName').textContent = user.name || 'Admin';
+        document.getElementById('welcomeUser').textContent = user.name || 'Admin';
+      } catch (e) {
+        console.error('Error parsing user data:', e);
+      }
+
+      return true;
+    }
+
+    // Fetch dashboard stats
+    async function fetchStats() {
+      try {
+        console.log('📈 Fetching stats from:', `${API_BASE_URL}/stats`);
+        const response = await fetch(`${API_BASE_URL}/stats`);
+        const result = await response.json();
+
+        if (result.success) {
+          // Update stat cards
+          document.getElementById('totalContacts').textContent = result.stats.total || 0;
+          document.getElementById('contactedCount').textContent = result.stats.contacted || 0;
+          document.getElementById('newCount').textContent = result.stats.new_contacts || 0;
+          document.getElementById('todayCount').textContent = result.stats.today || 0;
+          document.getElementById('todayCountStat').textContent = result.stats.today || 0;
+          document.getElementById('pendingCount').textContent = result.stats.new_contacts || 0;
+
+          // Calculate response rate
+          const total = result.stats.total || 1;
+          const contacted = result.stats.contacted || 0;
+          const responseRate = Math.round((contacted / total) * 100);
+          document.getElementById('responseRate').textContent = `${responseRate}%`;
+          document.getElementById('responseRateStat').textContent = `${responseRate}% response rate`;
+
+          // Update total change
+          const changeElement = document.getElementById('totalChange');
+          if (result.stats.today > 0) {
+            changeElement.innerHTML = `<i class="bi bi-graph-up-arrow"></i><span>+${result.stats.today} today</span>`;
+          } else {
+            changeElement.innerHTML = `<i class="bi bi-dash"></i><span>No new today</span>`;
+          }
+
+          console.log('✅ Stats updated successfully');
+        }
+      } catch (error) {
+        console.error('Error fetching stats:', error);
+      }
+    }
+
+    // Fetch contacts from API with better error handling
+    async function fetchContacts() {
+      if (!checkLogin()) return;
+
+      try {
+        console.log('🔍 Fetching contacts from:', `${API_BASE_URL}/contacts`);
+
+        document.getElementById('contactsBody').innerHTML = `
+          <tr>
+            <td colspan="8" class="text-center py-5">
+              <div class="loading-state">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Connecting to server...</p>
+              </div>
+            </td>
+          </tr>
+        `;
+
+        const response = await fetch(`${API_BASE_URL}/contacts`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        });
+
+        console.log('📡 Response status:', response.status, response.statusText);
+
+        if (!response.ok) {
+          throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        console.log('📦 Response data received');
+
+        if (result.success) {
+          currentData = result.data || [];
+          filteredData = [...currentData];
+          updateTable();
+          fetchStats(); // NOW CALLING fetchStats() AFTER DATA IS LOADED
+          showToast(`✅ Loaded ${result.data.length} contacts`, 'success');
+        } else {
+          showError('Failed to load data: ' + result.error);
+        }
+      } catch (error) {
+        console.error('❌ Error details:', error);
+        showError(`Cannot connect to server: ${error.message}<br><br>
+          <strong>Troubleshooting:</strong><br>
+          1. Make sure backend is running: <code>node server.js</code><br>
+          2. Check if server is on port 3000<br>
+          3. Open <a href="http://localhost:3000/api/test" target="_blank">http://localhost:3000/api/test</a> in browser<br>
+          4. Try restarting the backend server`);
+      }
+    }
+
+    // Update table with modern design
+    function updateTable() {
+      const tbody = document.getElementById('contactsBody');
+      const totalItems = filteredData.length;
+      const totalPages = Math.ceil(totalItems / pageSize);
+
+      // Update total pages in pagination
+      document.getElementById('totalPages').textContent = totalPages;
+
+      if (totalItems === 0) {
+        tbody.innerHTML = `
+                <tr>
+                    <td colspan="8" class="text-center py-5">
+                        <div class="empty-state">
+                            <div class="empty-icon">
+                                <i class="bi bi-inbox"></i>
+                            </div>
+                            <h4 class="empty-title">No contacts found</h4>
+                            <p class="empty-subtitle">Try adjusting your filters or add a new lead</p>
+                            <button class="btn btn-add-lead" data-bs-toggle="modal" data-bs-target="#addLeadModal">
+                                <i class="bi bi-plus-circle me-1"></i>Add First Lead
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        updatePagination();
+        return;
+      }
+
+      const startIndex = (currentPage - 1) * pageSize;
+      const endIndex = Math.min(startIndex + pageSize, totalItems);
+      const pageData = filteredData.slice(startIndex, endIndex);
+
+      tbody.innerHTML = pageData.map(item => `
+            <tr data-id="${item.id}" class="${selectedIds.has(item.id) ? 'selected' : ''}">
+                <!-- Column 1: Checkbox -->
+                <td class="select-column">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input row-select" 
+                               onchange="updateSelection(${item.id}, this.checked)"
+                               ${selectedIds.has(item.id) ? 'checked' : ''}>
+                        <label class="form-check-label" for="row-${item.id}"></label>
+                    </div>
+                </td>
+                
+                <!-- Column 2: Contact -->
+                <td>
+                    <div class="contact-info">
+                        <div class="contact-avatar">
+                            ${item.fullName?.charAt(0) || 'U'}
+                        </div>
+                        <div class="contact-details">
+                            <strong class="contact-name">${item.fullName || 'No Name'}</strong>
+                            <div class="contact-meta">
+                                <span class="country-name">${item.country || 'N/A'}</span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                
+                <!-- Column 3: Contact Info -->
+                <td>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="bi bi-envelope"></i>
+                            <span class="contact-value">${item.email || 'No email'}</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="bi bi-telephone"></i>
+                            <span class="contact-value">${item.phone || 'N/A'}</span>
+                        </div>
+                    </div>
+                </td>
+                
+                <!-- Column 4: Company Details -->
+                <td>
+                    <div class="company-info">
+                        <strong class="company-name">${item.company || 'N/A'}</strong>
+                        <div class="company-role">${item.jobTitle || 'N/A'}</div>
+                    </div>
+                </td>
+                
+                <!-- Column 5: Service Interest -->
+                <td>
+                    <div class="service-tag">
+                        <i class="bi ${getServiceIcon(item.serviceInterest)}"></i>
+                        <span class="service-name">${getServiceName(item.serviceInterest)}</span>
+                    </div>
+                </td>
+                
+                <!-- Column 6: Location -->
+                <td>
+                    <div class="location-info">
+                        <div class="location-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="location-text">${item.country || 'N/A'}</div>
+                    </div>
+                </td>
+                
+                <!-- Column 7: Status -->
+                <td>
+                    <div class="status-indicator ${item.status || 'new'}">
+                        <div class="status-dot"></div>
+                        <span class="status-text">${getStatusLabel(item.status)}</span>
+                    </div>
+                </td>
+                
+                <!-- Column 8: Actions -->
+                <td>
+                    <div class="action-menu">
+                        <button class="action-btn btn-view" onclick="viewContact(${item.id})" title="View Details">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <button class="action-btn btn-contact" onclick="updateStatus(${item.id}, 'contacted')" title="Mark as Contacted">
+                            <i class="bi bi-chat-left-text"></i>
+                        </button>
+                        <button class="action-btn btn-delete-item" onclick="deleteContact(${item.id})" title="Delete">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        `).join('');
+
+      updatePagination();
+    }
+
+    // Helper functions for icons and labels
+    function getCountryFlag(country) {
+      const flags = {
+        'US': '🇺🇸', 'UK': '🇬🇧', 'CA': '🇨🇦', 'AU': '🇦🇺',
+        'DE': '🇩🇪', 'FR': '🇫🇷', 'JP': '🇯🇵', 'SG': '🇸🇬'
+      };
+      return flags[country] || '🌍';
+    }
+
+    function getServiceIcon(service) {
+      const icons = {
+        'machine-learning': 'bi-cpu',
+        'nlp': 'bi-chat-quote',
+        'computer-vision': 'bi-eye',
+        'ai-consulting': 'bi-lightbulb',
+        'custom-development': 'bi-code-slash'
+      };
+      return icons[service] || 'bi-gear';
+    }
+
+    function getServiceName(service) {
+      const names = {
+        'machine-learning': 'ML',
+        'nlp': 'NLP',
+        'computer-vision': 'CV',
+        'ai-consulting': 'Consulting',
+        'custom-development': 'Custom Dev'
+      };
+      return names[service] || service || 'N/A';
+    }
+
+    function getStatusLabel(status) {
+      const labels = {
+        'new': 'New',
+        'contacted': 'Contacted',
+        'qualified': 'Qualified',
+        'archived': 'Archived'
+      };
+      return labels[status] || status;
+    }
+
+    function getStatusBadge(status) {
+      const badges = {
+        'new': { class: 'bg-primary', label: 'New' },
+        'contacted': { class: 'bg-success', label: 'Contacted' },
+        'qualified': { class: 'bg-warning', label: 'Qualified' },
+        'archived': { class: 'bg-secondary', label: 'Archived' }
+      };
+      const badge = badges[status] || { class: 'bg-secondary', label: status };
+      return `<span class="badge ${badge.class}">${badge.label}</span>`;
+    }
+
+    // Add clear search function
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      searchTable();
+    }
+
+    // View contact details
+    async function viewContact(id) {
+      const contact = currentData.find(c => c.id === id);
+      if (!contact) return;
+
+      const modal = document.getElementById('viewSubmissionModal');
+      const detailsDiv = document.getElementById('submissionDetails');
+
+      detailsDiv.innerHTML = `
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Personal Information</h6>
+            <p><strong>Name:</strong> ${contact.fullName}</p>
+            <p><strong>Email:</strong> ${contact.email}</p>
+            <p><strong>Phone:</strong> ${contact.phone || 'N/A'}</p>
+            <p><strong>Company:</strong> ${contact.company || 'N/A'}</p>
+            <p><strong>Job Title:</strong> ${contact.jobTitle || 'N/A'}</p>
+            <p><strong>Country:</strong> ${contact.country || 'N/A'}</p>
+          </div>
+          <div class="col-md-6">
+            <h6>Project Details</h6>
+            <p><strong>Service Interest:</strong> ${contact.serviceInterest}</p>
+            <p><strong>Budget:</strong> ${contact.projectBudget || 'N/A'}</p>
+            <p><strong>Timeline:</strong> ${contact.projectTimeline || 'N/A'}</p>
+            <p><strong>How heard about us:</strong> ${contact.hearAbout || 'N/A'}</p>
+            <p><strong>Status:</strong> ${getStatusBadge(contact.status)}</p>
+            <p><strong>Submitted:</strong> ${formatDate(contact.submissionDate)}</p>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <h6>Project Description</h6>
+            <div class="card bg-light">
+              <div class="card-body">
+                ${contact.projectDetails || 'No details provided'}
+              </div>
+            </div>
+          </div>
+        </div>
+        ${contact.additionalFeedback ? `
+        <div class="row mt-3">
+          <div class="col-12">
+            <h6>Additional Feedback</h6>
+            <div class="card bg-light">
+              <div class="card-body">
+                ${contact.additionalFeedback}
+              </div>
+            </div>
+          </div>
+        </div>
+        ` : ''}
+      `;
+
+      document.getElementById('contactLeadBtn').onclick = () => {
+        updateStatus(id, 'contacted');
+        const modalInstance = bootstrap.Modal.getInstance(modal);
+        modalInstance.hide();
+      };
+
+      const modalInstance = new bootstrap.Modal(modal);
+      modalInstance.show();
+    }
+
+    // Update contact status
+    async function updateStatus(id, status) {
+      try {
+        const response = await fetch(`${API_BASE_URL}/contacts/${id}/status`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ status })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Update local data
+          const index = currentData.findIndex(c => c.id === id);
+          if (index !== -1) {
+            currentData[index].status = status;
+            filteredData = [...currentData];
+            updateTable();
+          }
+          showToast(`✅ Status updated to ${status}`, 'success');
+          fetchStats(); // Refresh stats
+        } else {
+          showToast('❌ Failed to update status', 'error');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showToast('⚠️ Network error', 'error');
+      }
+    }
+
+    // Delete contact function
+    async function deleteContact(id) {
+      if (!confirm('Are you sure you want to delete this contact?')) {
+        return;
+      }
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/contacts/${id}`, {
+          method: 'DELETE'
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showToast('✅ Contact deleted successfully', 'success');
+          fetchContacts(); // Refresh the data
+          fetchStats(); // Refresh stats
+        } else {
+          showToast('❌ Failed to delete contact', 'error');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showToast('⚠️ Network error', 'error');
+      }
+    }
+
+    // Delete selected contacts
+    async function deleteSelected() {
+      if (selectedIds.size === 0) return;
+
+      if (!confirm(`Are you sure you want to delete ${selectedIds.size} contact(s)?`)) {
+        return;
+      }
+
+      try {
+        const deletePromises = Array.from(selectedIds).map(id =>
+          fetch(`${API_BASE_URL}/contacts/${id}`, { method: 'DELETE' })
+        );
+
+        const results = await Promise.all(deletePromises);
+        const allSuccess = results.every(r => r.ok);
+
+        if (allSuccess) {
+          // Remove deleted items from data
+          currentData = currentData.filter(item => !selectedIds.has(item.id));
+          filteredData = filteredData.filter(item => !selectedIds.has(item.id));
+          selectedIds.clear();
+          updateTable();
+          fetchStats();
+          showToast(`✅ Deleted ${results.length} contact(s)`, 'success');
+        } else {
+          showToast('❌ Some items failed to delete', 'error');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showToast('⚠️ Network error', 'error');
+      }
+    }
+
+    // Add new lead
+    async function addNewLead() {
+      const form = document.getElementById('addLeadForm');
+      const leadData = {
+        fullName: document.getElementById('leadName').value,
+        email: document.getElementById('leadEmail').value,
+        phone: document.getElementById('leadPhone').value || '',
+        company: document.getElementById('leadCompany').value || '',
+        serviceInterest: document.getElementById('leadService').value,
+        projectDetails: document.getElementById('leadNotes').value || ''
+      };
+
+      if (!leadData.fullName || !leadData.email) {
+        showToast('❌ Please fill required fields', 'error');
+        return;
+      }
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/contact`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(leadData)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showToast('✅ Lead added successfully', 'success');
+          form.reset();
+          const modal = bootstrap.Modal.getInstance(document.getElementById('addLeadModal'));
+          modal.hide();
+          fetchContacts(); // Refresh data
+        } else {
+          showToast('❌ Failed to add lead: ' + result.error, 'error');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showToast('⚠️ Network error', 'error');
+      }
+    }
+
+    // Selection management
+    function updateSelection(id, isChecked) {
+      if (isChecked) {
+        selectedIds.add(id);
+      } else {
+        selectedIds.delete(id);
+        document.getElementById('selectAll').checked = false;
+      }
+
+      const selectedCount = selectedIds.size;
+      document.getElementById('selectedCount').textContent = selectedCount;
+      document.getElementById('deleteSelectedBtn').disabled = selectedCount === 0;
+      document.getElementById('markContactedBtn').disabled = selectedCount === 0;
+    }
+
+    function selectAllRows(isChecked) {
+      const currentPageData = filteredData.slice(
+        (currentPage - 1) * pageSize,
+        currentPage * pageSize
+      );
+
+      currentPageData.forEach(item => {
+        if (isChecked) {
+          selectedIds.add(item.id);
+        } else {
+          selectedIds.delete(item.id);
+        }
+      });
+
+      // Update checkboxes
+      document.querySelectorAll('.row-select').forEach(cb => {
+        cb.checked = isChecked;
+      });
+
+      updateSelection(0, false); // Just to update counts
+    }
+
+    // Filter and search functions
+    function filterTable() {
+      const statusFilter = document.getElementById('filterStatus').value;
+      const serviceFilter = document.getElementById('filterService').value;
+      const dateFilter = document.getElementById('filterDate').value;
+
+      filteredData = currentData.filter(item => {
+        // Status filter
+        if (statusFilter && item.status !== statusFilter) return false;
+
+        // Service filter
+        if (serviceFilter && item.serviceInterest !== serviceFilter) return false;
+
+        // Date filter
+        if (dateFilter) {
+          const itemDate = new Date(item.submissionDate);
+          const now = new Date();
+
+          switch (dateFilter) {
+            case 'today':
+              return itemDate.toDateString() === now.toDateString();
+            case 'week':
+              const weekAgo = new Date(now - 7 * 24 * 60 * 60 * 1000);
+              return itemDate >= weekAgo;
+            case 'month':
+              const monthAgo = new Date(now);
+              monthAgo.setMonth(monthAgo.getMonth() - 1);
+              return itemDate >= monthAgo;
+          }
+        }
+
+        return true;
+      });
+
+      currentPage = 1;
+      updateTable();
+    }
+
+    function searchTable() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+      filteredData = currentData.filter(item => {
+        return (
+          item.fullName?.toLowerCase().includes(searchTerm) ||
+          item.email?.toLowerCase().includes(searchTerm) ||
+          item.company?.toLowerCase().includes(searchTerm) ||
+          item.phone?.toLowerCase().includes(searchTerm)
+        );
+      });
+
+      currentPage = 1;
+      updateTable();
+    }
+
+    function clearFilters() {
+      document.getElementById('filterStatus').value = '';
+      document.getElementById('filterService').value = '';
+      document.getElementById('filterDate').value = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('sortBy').value = 'date-desc';
+
+      filteredData = [...currentData];
+      currentPage = 1;
+      updateTable();
+    }
+
+    function sortTable() {
+      const sortBy = document.getElementById('sortBy').value;
+
+      filteredData.sort((a, b) => {
+        switch (sortBy) {
+          case 'date-desc':
+            return new Date(b.submissionDate) - new Date(a.submissionDate);
+          case 'date-asc':
+            return new Date(a.submissionDate) - new Date(b.submissionDate);
+          case 'name-asc':
+            return (a.fullName || '').localeCompare(b.fullName || '');
+          case 'name-desc':
+            return (b.fullName || '').localeCompare(a.fullName || '');
+          default:
+            return 0;
+        }
+      });
+
+      updateTable();
+    }
+
+    // Pagination functions
+    function updatePagination() {
+      const totalItems = filteredData.length;
+      const totalPages = Math.ceil(totalItems / pageSize);
+      const startIndex = (currentPage - 1) * pageSize + 1;
+      const endIndex = Math.min(currentPage * pageSize, totalItems);
+
+      document.getElementById('totalCount').textContent = totalItems;
+      document.getElementById('totalItems').textContent = totalItems;
+      document.getElementById('showingCount').textContent = `${startIndex}-${endIndex}`;
+      document.getElementById('currentPage').textContent = currentPage;
+      document.getElementById('totalPages').textContent = totalPages;
+
+      document.getElementById('prevBtn').disabled = currentPage === 1;
+      document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+    }
+
+    function changePage(delta) {
+      const totalPages = Math.ceil(filteredData.length / pageSize);
+      const newPage = currentPage + delta;
+
+      if (newPage >= 1 && newPage <= totalPages) {
+        currentPage = newPage;
+        updateTable();
+      }
+    }
+
+    // Mark selected as contacted
+    async function markAsContacted() {
+      if (selectedIds.size === 0) return;
+
+      try {
+        const updatePromises = Array.from(selectedIds).map(id =>
+          updateStatus(id, 'contacted')
+        );
+
+        await Promise.all(updatePromises);
+        selectedIds.clear();
+        document.getElementById('selectAll').checked = false;
+        updateSelection(0, false);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    // Contact lead function
+    function contactLead() {
+      showToast('📞 Opening contact details...', 'info');
+    }
+
+    // Show error message
+    function showError(message) {
+      const tbody = document.getElementById('contactsBody');
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="8" class="text-center py-5 text-danger">
+            <i class="bi bi-exclamation-triangle fs-1"></i>
+            <p class="mt-3">${message}</p>
+            <button class="btn btn-primary mt-2" onclick="fetchContacts()">
+              <i class="bi bi-arrow-clockwise"></i> Retry
+            </button>
+            <p class="mt-2 small">Make sure backend server is running: <code>node server.js</code></p>
+          </td>
+        </tr>
+      `;
+    }
+
+    // Show toast notification
+    function showToast(message, type = 'info') {
+      const toast = document.getElementById('statusToast');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMessage = document.getElementById('toastMessage');
+
+      // Set color based on type
+      const colors = {
+        success: 'text-bg-success',
+        error: 'text-bg-danger',
+        info: 'text-bg-info',
+        warning: 'text-bg-warning'
+      };
+
+      toast.className = `toast ${colors[type] || colors.info}`;
+      toastTitle.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+      toastMessage.textContent = message;
+
+      const bsToast = new bootstrap.Toast(toast);
+      bsToast.show();
+    }
+
+    // Helper functions
+    function formatDate(dateString) {
+      if (!dateString) return 'N/A';
+      const date = new Date(dateString);
+      return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+    }
+
+    function getTimeAgo(dateString) {
+      if (!dateString) return '';
+      const date = new Date(dateString);
+      const now = new Date();
+      const diffMs = now - date;
+      const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+
+      if (diffHours < 1) return 'Just now';
+      if (diffHours < 24) return `${diffHours}h ago`;
+      if (diffHours < 48) return 'Yesterday';
+      return `${Math.floor(diffHours / 24)} days ago`;
+    }
+
+    // Update time
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('serverTime').textContent =
+        now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    // Test backend connection
+    async function testBackendConnection() {
+      try {
+        console.log('🔌 Testing backend connection...');
+        const response = await fetch(`${API_BASE_URL}/health`);
+        if (response.ok) {
+          console.log('✅ Backend is running!');
+          return true;
+        } else {
+          console.error('❌ Backend responded with error:', response.status);
+          return false;
+        }
+      } catch (error) {
+        console.error('❌ Cannot connect to backend:', error.message);
+        return false;
+      }
+    }
+
+    // Initialize dashboard
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check login
+      if (!checkLogin()) return;
+
+      console.log('📊 Admin dashboard loading...');
+
+      // Initialize event listeners
+      document.getElementById('selectAll').addEventListener('change', (e) => {
+        selectAllRows(e.target.checked);
+      });
+
+      // Add logout functionality
+      document.querySelectorAll('.logout-btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          if (this.classList.contains('logout-btn')) {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('adminUser');
+            window.location.href = 'admin.html';
+          }
+        });
+      });
+
+      // Test connection first
+      testBackendConnection().then(isConnected => {
+        if (isConnected) {
+          // Load data
+          fetchContacts();
+        } else {
+          showError(`Cannot connect to backend server.<br><br>
+            <strong>Please make sure:</strong><br>
+            1. Backend is running: <code>node server.js</code><br>
+            2. Server is on port 3000<br>
+            3. No firewall blocking the connection<br><br>
+            <a href="http://localhost:3000/api/test" target="_blank">Test backend here</a>`);
+        }
+      });
+
+      // Update time every minute
+      updateTime();
+      setInterval(updateTime, 60000);
+    });
+  </script>
+
+</body>
+
+</html>

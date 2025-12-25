@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/styles/common.css">
+  <link rel="stylesheet" href="assets/styles/admin.css">
+
+  <title> Admin Login | AI Solution</title>
+  <link rel="icon" href="img/logo_w_bg.png">
+</head> 
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-white nav-shadow sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+          <img src="img/logo.jpg" width="45" height="45" class="mx-3"/>
+        AI Solution
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Admin Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal"
+              data-bs-target="#dashboardHintModal">Admin Dashboard</a></li>
+        </ul>
+        <a class="d-none d-lg-block fs-4 text-decoration-none ms-lg-auto" href="admin.html" aria-label="Admin">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Link -->
+  <section class="py-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Admin Login</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero section-->
+  <section class="py-2">
+    <div class="container text-center">
+      <h3 class="fw-bold mb-1 admin-portal">AI Solution Admin Portal</h3>
+      <div class="restrict-note mb-1">** Restricted Access - Authorized Personnel Only **</div>
+    </div>
+  </section>
+
+  <!-- Popup-->
+  <div class="modal fade" id="dashboardHintModal" tabindex="-1" aria-labelledby="dashboardHintModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dashboardHintModalLabel">Admin Dashboard Access</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Please <strong>Sign In</strong> with your credentials to access the admin dashboard.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <section class="admin-login-section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+
+        <!-- Left side-->
+        <div class="col-12 col-lg-6">
+          <div class="login-illustration">
+            <div class="illustration-content">
+              <h4>Secure Admin Portal</h4>
+              <p class="mb-4">Access comprehensive analytics, manage projects, and oversee operations from our centralized admin dashboard.</p>
+              <div class="features-list">
+                <div class="feature-item">
+                  <span class="feature-icon">📊</span>
+                  <span>Real-time Analytics</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">👥</span>
+                  <span>User Management</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">📈</span>
+                  <span>Performance Metrics</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">🔒</span>
+                  <span>Secure Access</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="col-12 col-lg-6">
+          <div class="login-panel">
+            <div class="login-header text-center mb-4">
+              <h3>Admin Login</h3>
+              <p class="text-muted">Enter your credentials to access the dashboard</p>
+            </div>
+            <form id="adminLoginForm" class="needs-validation" novalidate>
+              <div class="mb-4 login-input">
+                <label class="form-label">Employee ID</label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                  </span>
+                  <input type="text" class="form-control" id="employeeId" placeholder="Enter your employee ID" required value="admin123">
+                </div>
+                <div class="invalid-feedback">Please enter your employee ID</div>
+              </div>
+              <div class="mb-4 login-input">
+                <label class="form-label">Password</label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                  </span>
+                  <input id="adminPassword" type="password" class="form-control" placeholder="Enter your password" required minlength="6" value="password123">
+                  <button class="btn btn-outline-secondary" type="button" id="togglePassword" aria-label="Toggle password visibility">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="invalid-feedback">Password must be at least 6 characters</div>
+              </div>
+              <div class="mb-4 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label mx-3" for="rememberMe">Remember me for 30 days</label>
+              </div>
+              <button class="btn btn-primary w-100 btn-lg" type="submit">
+                <span class="d-flex align-items-center justify-content-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="me-2">
+                    <path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                  </svg>
+                  Log In to Dashboard
+                </span>
+              </button>
+              <div class="text-center mt-4">
+                <a href="#" class="text-decoration-none small">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-1">
+                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                  </svg>
+                  Forgot your password?
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (() => {
+      const form = document.getElementById('adminLoginForm');
+      const pwd = document.getElementById('adminPassword');
+      const toggle = document.getElementById('togglePassword');
+      
+      // Toggle password visibility
+      if (toggle && pwd) {
+        toggle.addEventListener('click', () => {
+          const isPwd = pwd.type === 'password';
+          pwd.type = isPwd ? 'text' : 'password';
+          toggle.innerHTML = isPwd ? 
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"/></svg>' :
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>';
+        });
+      }
+      
+      // Form submission with backend API
+      form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        
+        if (!form.checkValidity()) {
+          event.stopPropagation();
+          form.classList.add('was-validated');
+          return;
+        }
+        
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = `
+          <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+          Authenticating...
+        `;
+        submitBtn.disabled = true;
+        
+        // Get form data
+        const employeeId = document.getElementById('employeeId').value;
+        const password = document.getElementById('adminPassword').value;
+        
+        try {
+          // Send login request to backend
+          const response = await fetch('http://localhost:3000/api/admin/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              employee_id: employeeId,
+              password: password
+            })
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Login successful
+            alert('✅ Login successful! Redirecting to dashboard...');
+            
+            // Store login status
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('adminUser', JSON.stringify(result.user));
+            
+            // Redirect to dashboard
+            setTimeout(() => {
+              window.location.href = 'admin-dashboard.html';
+            }, 1000);
+          } else {
+            // Login failed
+            alert('❌ Login failed: ' + (result.error || 'Invalid credentials'));
+            
+            // Reset button
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('⚠️ Cannot connect to server. Make sure:\n1. Backend is running (node server.js)\n2. Server is on port 3000\n3. No firewall blocking');
+          
+          // Reset button
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }
+      }, false);
+      
+      // Auto focus on first input
+      document.querySelector('input[type="text"]')?.focus();
+    })();
+  </script>
+</body>
+
+</html>
